@@ -317,28 +317,24 @@ app.delete('/api/books/:id', authenticateToken, (req, res) => {
 app.listen(3000, () => console.log('Server running on port 3000'));
 ```
 
-### package.json
+### package.json that we might need
 
 ```json
 {
   "name": "library-catalog-backend",
   "version": "1.0.0",
   "dependencies": {
-    "express": "^4.18.2",
-    "mysql2": "^3.6.0",
-    "bcrypt": "^5.1.1",
-    "jsonwebtoken": "^9.0.2",
-    "multer": "^1.4.5-lts.1"
+    "express": "^5.2.1",
+    "mysql": "^2.18.1",
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
+    "csurf": "^1.11.0",
+    "sanitize-html": "^2.17.3"
   }
 }
+
+express and mysql are the ones we usually use for each lab, body parser, cookie, csurf, and sanitize were from module 12. 
 ```
 
-## Summary
-
-1. **Authentication**: JWT tokens stored in localStorage
-2. **API Calls**: Replace all localStorage operations with fetch() calls
-3. **File Uploads**: Use FormData for multipart/form-data
-4. **Authorization**: Include Bearer token in headers
-5. **Error Handling**: Catch and display errors appropriately
 
 All TODO comments in the JavaScript files mark exactly where to make changes!
