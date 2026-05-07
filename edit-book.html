@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book - Library Catalog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="cream-bg min-height">
+        <header class="header crimson-bg">
+            <div class="header-content-simple">
+                <a href="catalog.html" class="back-link">
+                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Catalog
+                </a>
+                <h1>Edit Book</h1>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="loadingState" class="loading-state">Loading...</div>
+
+            <form id="editBookForm" class="book-form" style="display: none;">
+                <input type="hidden" id="bookId" name="bookId">
+
+                <div class="form-section">
+                    <label>Book Cover Image</label>
+                    <div class="image-upload-container">
+                        <div id="imagePreview" class="image-preview" style="display: none;">
+                            <img id="previewImg" src="" alt="Book cover preview">
+                            <button type="button" id="removeImageBtn" class="remove-image-btn">×</button>
+                        </div>
+                        <label id="uploadLabel" class="upload-box">
+                            <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                            <span>Click to upload</span>
+                            <span class="upload-hint">PNG, JPG up to 5MB</span>
+                            <input type="file" id="coverImage" accept="image/*" style="display: none;">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="title">Title *</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="author">Author *</label>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isbn">ISBN *</label>
+                        <input type="text" id="isbn" name="isbn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publisher">Publisher *</label>
+                        <input type="text" id="publisher" name="publisher" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="publicationYear">Publication Year *</label>
+                        <input type="number" id="publicationYear" name="publicationYear" min="1000" max="2100" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genre">Genre *</label>
+                        <select id="genre" name="genre" required>
+                            <option value="">Select a genre</option>
+                            <option value="Fiction">Fiction</option>
+                            <option value="Non-Fiction">Non-Fiction</option>
+                            <option value="Science Fiction">Science Fiction</option>
+                            <option value="Fantasy">Fantasy</option>
+                            <option value="Mystery">Mystery</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Biography">Biography</option>
+                            <option value="History">History</option>
+                            <option value="Science">Science</option>
+                            <option value="Self-Help">Self-Help</option>
+                            <option value="Classic Fiction">Classic Fiction</option>
+                            <option value="Dystopian Fiction">Dystopian Fiction</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+
+                <div class="button-row">
+                    <button type="submit" class="btn btn-primary btn-flex">Update Book</button>
+                    <a href="catalog.html" class="btn btn-stone btn-flex">Cancel</a>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="js/edit-book.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog - Library System</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="cream-bg min-height">
+        <header class="header crimson-bg">
+            <div class="header-content">
+                <div class="header-left">
+                    <svg class="icon-medium" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                    <h1>Book Catalog</h1>
+                </div>
+                <div class="header-right" id="headerButtons">
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <svg class="icon-large stone-color" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                <h2 class="dark-crimson-text">No books in catalog</h2>
+                <p>Get started by adding your first book</p>
+                <a href="add-book.html" class="btn btn-primary" id="firstBookBtn" style="display: none;">
+                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Your First Book
+                </a>
+            </div>
+
+            <div id="bookGrid" class="book-grid">
+            </div>
+        </main>
+    </div>
+
+    <script src="js/catalog.js"></script>
+</body>
+</html>
